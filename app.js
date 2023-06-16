@@ -11,14 +11,6 @@ mongoose.mongoose.connect('mongodb+srv://logan:logan%402000@inotebook-cluster.cf
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
-app.post('/', (req, res) => {
-    console.log(req.body);
-    console.log(typeof req.body.start);
-
-
-
-    res.send('done');
-})
 app.listen(process.env.PORT || 3000, () => {
     console.log("server started");
 })
