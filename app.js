@@ -10,9 +10,6 @@ mongoose.mongoose.connect('mongodb+srv://logan:logan%402000@inotebook-cluster.cf
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.get('/', (req, res) => {
-    res.send("<form action='/' method='post'><input type='time' name='start'> <button type='submit'>click</button></form>");
-})
 app.use(router);
 app.post('/', (req, res) => {
     console.log(req.body);
