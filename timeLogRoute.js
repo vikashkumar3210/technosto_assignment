@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const myList = require('./models/timelog_model.js');
 const router = new express.Router();
 //getting all task 
-router.get('/userTimeLog', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const timeLogs = await myList.find({});
         res.status(200).json(timeLogs);
@@ -39,7 +39,7 @@ router.post('/userTimeLog', async (req, res) => {
         });
         const result = await listItem.save();
         if (result) {
-            res.status(201).redirect('/userTimeLog');
+            res.status(201).redirect('/');
         }
     }
     catch (error) {
