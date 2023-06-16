@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "60db99d5-eaa1-4b94-92cc-3992f20065b9",
+		"name": "Assignment collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adding time given task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "07-25-2000",
+							"type": "default"
+						},
+						{
+							"key": "Project",
+							"value": "Domino",
+							"type": "default"
+						},
+						{
+							"key": "startTime",
+							"value": "12:38",
+							"type": "default"
+						},
+						{
+							"key": "endTime",
+							"value": "01:36",
+							"type": "default"
+						},
+						{
+							"key": "Description",
+							"value": "Given task is dummy",
+							"type": "default"
+						},
+						{
+							"key": "hours",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "minutes",
+							"value": "30",
+							"type": "default"
+						},
+						{
+							"key": "Task",
+							"value": "test4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/userTimeLog",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"userTimeLog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve all task time log",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delting particular task time log",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/userTimeLog/test1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"userTimeLog",
+						"test1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getting specific task time log",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/userTimeLog/test1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"userTimeLog",
+						"test1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
